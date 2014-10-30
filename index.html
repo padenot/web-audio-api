@@ -1941,11 +1941,12 @@ invoked in the following cases:
         The <a><code>duration</code></a> parameter describes the
         duration of the portion (in seconds) to be played.  If this parameter is
         not passed, the duration will be equal to the total duration of the
-        AudioBuffer minus the <code>offset</code> parameter.  Thus if neither
-        <code>offset</code> nor <code>duration</code> are specified then the
-        implied duration is the total duration of the AudioBuffer.  An 
-        INVALID_ACCESS_ERR exception MUST be thrown if <code>duration</code> 
-        is negative or is not a finite number.
+        <a><code>AudioBuffer</code></a> minus the <code>offset</code> parameter.
+        Thus if neither <code>offset</code> nor <code>duration</code> are
+        specified then the implied duration is the total duration of the
+        <a><code>AudioBuffer</code></a>.  An INVALID_ACCESS_ERR exception MUST
+        be thrown if <code>duration</code> is negative or is not a finite
+        number.
       </dd>
     </dl>
   </dd>
