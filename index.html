@@ -1931,8 +1931,10 @@ invoked in the following cases:
         The <dfn id="dfn-offset">offset</dfn> parameter describes the offset
         time in the buffer (in seconds) where playback will begin. If 0 is
         passed in for this value, then playback will start from the beginning of
-        the buffer.  An INVALID_ACCESS_ERR exception MUST be thrown if 
-        <code>offset</code> is negative or is not a finite number.
+        the buffer. An INVALID_ACCESS_ERR exception MUST be thrown if
+        <code>offset</code> is negative, is not a finite number, or greater than
+        the duration of the current <a><code>AudioBuffer</code></a> for this
+        <a><code>AudioBufferSourceNode</code></a>.
       </dd>
       <dt>optional double duration</dt>
       <dd>
