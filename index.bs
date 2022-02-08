@@ -6964,6 +6964,7 @@ input to the node is either mono or stereo.
 interface ConvolverNode : AudioNode {
 	constructor (BaseAudioContext context, optional ConvolverOptions options = {});
 	attribute AudioBuffer? buffer;
+	Promise<void> setBuffer(AudioBuffer buffer);
 	attribute boolean normalize;
 };
 </pre>
@@ -7007,6 +7008,20 @@ Constructors</h4>
 			context: The {{BaseAudioContext}} this new {{ConvolverNode}} will be <a href="#associated">associated</a> with.
 			options: Optional initial parameter value for this {{ConvolverNode}}.
 		</pre>
+</dl>
+
+<h4 id="ConvolverNode-methods">Methods</h4>
+<dl dfn-type=method dfn-for="ConvolverNode">
+	: <dfn>setBuffer</dfn>
+	  Asynchronously sets convolution impulse for this {{ConvolverNode}}.
+
+		<pre class=argumentdef for="ConvolverNode/setBuffer()">
+		  buffer: The buffer to be set as convolution impulse.
+		</pre>
+
+		<div>
+			<em>Return type:</em> {{undefined}}
+		</div>
 </dl>
 
 <h4 id="ConvolverNode-attributes">
